@@ -1,0 +1,2 @@
+module WellnessCentersHelper
+end

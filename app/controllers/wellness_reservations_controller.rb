@@ -1,0 +1,2 @@
+class WellnessReservationsController < ApplicationController
+end
