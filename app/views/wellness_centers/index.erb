@@ -1,0 +1,3 @@
+<% @wellnesscenters.each do |wellness_center|%>
+<%= link_to wellness_center.name, wellness_center_path(wellness_center.id) %>
+<%end%>

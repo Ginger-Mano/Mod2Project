@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all 
 Restaurant.destroy_all 
-Wellness_Center.destroy_all 
+WellnessCenter.destroy_all 
 
 5.times do 
 User.create([
@@ -30,7 +30,7 @@ Restaurant.create([
 end
 
 50.times do
-Wellness_center.create([
+WellnessCenter.create([
     { name: "Sun Studio" ,
     bio: "Namaste",
     address: Faker::Address.street_address ,
