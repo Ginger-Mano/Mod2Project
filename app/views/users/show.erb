@@ -1,5 +1,5 @@
 <h1> Welcome<%= + "  " +@user.username.capitalize %></h1>
 
 <%= button_to "Reservations"%>
-<%= button_to "View Black Owned Restaurants", { :controller => 'restaurants', :action => 'index'} %>
-<%= button_to "View Black Owned Wellness Centers"%>
+<%= button_to "View Black Owned Restaurants", "/restaurants", method: :get %>
+<%= button_to "View Black Owned Wellness Centers", "/wellness_centers", method: :get%>
