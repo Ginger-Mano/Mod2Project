@@ -1,1 +1,9 @@
-<h1>Hi</h1>
+<h1>Current Reservations</h1>
+
+<% @user.restaurant_reservations.each do |reservation|%>
+<%= link_to reservation.restaurant_name, restaurant_path(reservation.restaurant_id) %><br>
+<%= reservation.date %><br>
+<%= reservation.time %><br><br>
+
+
+<% end %>
