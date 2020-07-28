@@ -1,7 +1,7 @@
 <h1><%=@restaurantreservation.restaurant_name %></h1>
-<%= form_with model: @restaurantreservations do |f| %>
+<%= form_with model: @restaurantreservation, local: true do |f| %>
     <%= f.label :party_size %>
-    <%= f.text_field :party_size %>
+    <%= f.number_field :party_size %>
     <br>
     <%= f.label :date %>
     <%= f.text_field :date %>
@@ -9,6 +9,12 @@
      <%= f.label :time %>
     <%= f.text_field :time %>
     <br>
+    <%= f.label :user_id %>
+    <%= f.number_field :user_id %>
+    <br>
+    <%= f.label :restaurant_id %>
+    <%= f.number_field :restaurant_id %>
+
 
     <%= f.submit "Create Reservation" %>
 <% end %>

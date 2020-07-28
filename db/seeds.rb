@@ -5,16 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+RestaurantReservation.destroy_all
 User.destroy_all 
 Restaurant.destroy_all 
 WellnessCenter.destroy_all 
+
 
 5.times do 
 User.create([
     { username: "NYC123",
       password: "NYC123",
       location: "brooklyn"
-    }
+}
 ])
 end
 
@@ -43,10 +45,12 @@ end
 6.times do
     RestaurantReservation.create([
         {
-            restaurant_name: Restaurant.first,
+            restaurant_name: Restaurant.first.name,
             party_size: 5,
             date: "November 3",
-            time: "5:00"
+            time: "5:00",
+            user_id: User.first.id,
+            restaurant_id: Restaurant.first.id
         }
     ])
 end
