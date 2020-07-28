@@ -16,6 +16,10 @@ ActiveRecord::Schema.define(version: 2020_07_27_205917) do
   enable_extension "plpgsql"
 
   create_table "restaurant_reservations", force: :cascade do |t|
+    t.integer "party_size"
+    t.string "restaurant_name"
+    t.string "date"
+    t.string "time"
     t.bigint "user_id", null: false
     t.bigint "restaurant_id", null: false
     t.datetime "created_at", precision: 6, null: false

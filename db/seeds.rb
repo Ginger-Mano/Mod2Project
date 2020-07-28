@@ -39,4 +39,15 @@ WellnessCenter.create([
     avg_rating: 4
 }])
 end
+
+6.times do
+    RestaurantReservation.create([
+        {
+            restaurant_name: Restaurant.first,
+            party_size: 5,
+            date: "November 3",
+            time: "5:00"
+        }
+    ])
+end
 puts "done seeding"
