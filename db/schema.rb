@@ -59,6 +59,10 @@ ActiveRecord::Schema.define(version: 2020_07_27_205917) do
   end
 
   create_table "wellness_reservations", force: :cascade do |t|
+    t.integer "group_size"
+    t.string "wellnesscenter_name"
+    t.string "date"
+    t.string "time"
     t.bigint "user_id", null: false
     t.bigint "wellness_center_id", null: false
     t.datetime "created_at", precision: 6, null: false

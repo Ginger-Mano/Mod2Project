@@ -1,0 +1,18 @@
+<%= form_with model: @wellnessreservation, local: true do |f| %>
+    <%= f.label :group_size %>   
+    <%= f.number_field :group_size %> <br>    
+
+    <%= f.label :date %>  
+    <%= f.text_field :date %><br>   
+
+    <%= f.label :time %>    
+    <%= f.text_field :time %><br>
+
+    <%= f.label :user_id %>    
+    <%= f.number_field :user_id %><br>
+
+    <%= f.label :wellness_center_id %>    
+    <%= f.number_field :wellness_center_id %><br>
+
+    <%= f.submit "Submit" %>
+    <% end %>

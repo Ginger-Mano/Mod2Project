@@ -1,11 +1,26 @@
-<h1>Current Reservations</h1>
+<h1>Current Restaurant Reservations</h1>
 
 <% @user.restaurant_reservations.each do |reservation|%>
+
 <%= link_to reservation.restaurant_name, restaurant_path(reservation.restaurant_id) %><br>
 <%= reservation.date %><br>
 <%= reservation.time %><br><br>
 
-<%= link_to "Edit Reservation", edit_restaurant_reservation_path(reservation.restaurant_reservations.id) , method: :get%>
-<%end%>
+<%= link_to "Edit Reservation", edit_restaurant_reservation_path(reservation), method: :get%><br>
+<%= link_to "Delete Reservation", restaurant_reservation_path(reservation), method: :delete%><br><br>
+<% end %>
+
+<h1>Current Wellness Reservations</h1>
+<% @user.wellness_reservations.each do |wellnessreservation|%>
+
+<%= link_to wellnessreservation.wellnesscenter_name, wellness_center_path(wellnessreservation.wellness_center_id) %><br>
+<%= wellnessreservation.date %><br>
+<%= wellnessreservation.time %><br><br>
+
+<%= link_to "Edit Reservation", edit_wellness_reservation_path(wellnessreservation), method: :get%><br>
+<%= link_to "Delete Reservation", wellness_reservation_path(wellnessreservation), method: :delete%><br><br>
+<% end %>
+
+
 
 
