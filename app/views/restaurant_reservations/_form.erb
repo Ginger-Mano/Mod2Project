@@ -1,0 +1,11 @@
+<%= form_with model: @restaurantreservations do |f| %>
+    <%= f.label :party_size %>   
+    <%= f.text_field :party_size %> <br>    
+
+    <%= f.label :date %>  
+    <%= f.text_field :date %><br>   
+
+    <%= f.label :time %>    
+    <%= f.text_field :time %><br>
+
+    <%= f.submit "Submit" %><% end %>

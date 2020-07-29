@@ -12,6 +12,21 @@ class RestaurantReservationsController < ApplicationController
         redirect_to showreservations_path(params[:restaurant_reservation][:user_id])
     end
 
+    def edit      
+        @restaurantreservation = RestaurantReservation.find(params[:id])    
+    end
+
+    def update        
+        @restaurantreservation = RestaurantReservation.find(params[:id])        
+        @restaurantreservation.update(restaurantreservation_params)        
+        redirect_to restaurantreservation_path(@restaurantreservation)    
+    end    
+    def destroy        
+        @restaurantreservation = RestaurantReservation.find(params[:id])        
+        @restaurantreservation.destroy        
+        redirect_to @restaurantreservation_path  
+    end
+
     private
 
     def restaurantreservation_params
