@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 RestaurantReservation.destroy_all
+WellnessReservation.destroy_all
 User.destroy_all 
 Restaurant.destroy_all 
 WellnessCenter.destroy_all 
@@ -51,6 +52,19 @@ end
             time: "5:00",
             user_id: User.first.id,
             restaurant_id: Restaurant.first.id
+        }
+    ])
+end
+
+6.times do
+    WellnessReservation.create([
+        {
+            wellnesscenter_name: WellnessCenter.first.name,
+            group_size: 5,
+            date: "November 3",
+            time: "5:00",
+            user_id: User.first.id,
+            wellness_center_id: WellnessCenter.first.id
         }
     ])
 end
