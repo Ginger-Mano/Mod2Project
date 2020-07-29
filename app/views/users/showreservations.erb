@@ -4,6 +4,12 @@
 <%= link_to reservation.restaurant_name, restaurant_path(reservation.restaurant_id) %><br>
 <%= reservation.date %><br>
 <%= reservation.time %><br><br>
+<<<<<<< HEAD
 <>
+=======
 
-<% end %>
+<%= link_to "Edit Reservation", edit_restaurant_reservation_path(reservation.restaurant_reservations.id) , method: :get%>
+<%end%>
+
+>>>>>>> m
+
