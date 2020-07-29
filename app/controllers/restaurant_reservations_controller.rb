@@ -27,7 +27,7 @@ class RestaurantReservationsController < ApplicationController
     def destroy       
        @restaurantreservation = RestaurantReservation.find(params[:id])        
        @restaurantreservation.destroy    
-       redirect_to showreservations_path(@restaurantreservation)    
+       redirect_back fallback_location: showreservations_path #(@restaurantreservation)    
     end
 
     private
