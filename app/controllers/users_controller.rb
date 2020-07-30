@@ -19,10 +19,6 @@ class UsersController < ApplicationController
 
     def create
         user = User.create(user_params)
-<<<<<<< HEAD
-        # redirect_to user_path(@user)
-=======
->>>>>>> s
         if user.valid?
             redirect_to user_path(user.id)
         else
