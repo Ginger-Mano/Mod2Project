@@ -3,6 +3,6 @@
 <%= @wellnesscenter.bio %>
 <%= @wellnesscenter.url %>
 <%= @wellnesscenter.review %>
-<%= @wellnesscenter.avg_rating %>
+<%= @wellnesscenter.avg_rating %> <br>
 
-#button for index page return
+<%= link_to "Create a Reservation", new_wellness_reservation_path(@wellnesscenter) %>

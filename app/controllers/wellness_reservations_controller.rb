@@ -24,8 +24,8 @@ class WellnessReservationsController < ApplicationController
 
     def destroy       
         @wellnessreservation = WellnessReservation.find(params[:id])        
-        @wellnessreservation.destroy    
-        # redirect_to showreservations_path(@wellnesscenter)    
+        @wellnessreservation.destroy  
+        redirect_back fallback_location: showreservations_path  
     end
 
     private
