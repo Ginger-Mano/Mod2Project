@@ -1,3 +1,9 @@
+<h1>Create an account </h1>
+<% if @errors %>
+    <% @errors.each do |error| %>
+        <p style="color:red"><%= error %></p>
+    <% end %>
+<% end %>
 <%= form_with model: @user do |f| %>
     <%= f.label :username %>
     <%= f.text_field :username %>

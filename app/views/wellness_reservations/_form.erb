@@ -9,10 +9,11 @@
     <%= f.text_field :time %><br>
 
     <%= f.label :user_id %>    
-    <%= f.number_field :user_id %><br>
+    <%= f.collection_select :user_id, User.all, :id, :username %><br>
 
-    <%= f.label :wellness_center_id %>    
-    <%= f.number_field :wellness_center_id %><br>
+    <%= f.label :wellnesscenter_id %>    
+    <%= f.collection_select :wellness_center_id, WellnessCenter.all, :id, :name %><br>
+    
 
     <%= f.submit "Submit" %>
     <% end %>

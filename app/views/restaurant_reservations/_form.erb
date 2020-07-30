@@ -8,11 +8,16 @@
     <%= f.label :time %>    
     <%= f.text_field :time %><br>
 
+<<<<<<< HEAD
     <%= f.label :user_id %>  
     <%= f.number_field :user_id %>
+=======
+    <%= f.label :user_id %>    
+    <%= f.collection_select :user_id, User.all, :id, :username %><br>
+>>>>>>> s
 
     <%= f.label :restaurant_id %>    
-    <%= f.number_field :restaurant_id %><br>
+    <%= f.collection_select :restaurant_id, Restaurant.all, :id, :name %><br>
 
     <%= f.submit "Submit" %>
     <% end %>
