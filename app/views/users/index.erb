@@ -1,3 +1,13 @@
-<% @users.each do |user|%>
-    <%= user %>
-    <%end%>
+<h1>Welcome</h1>
+<%= form_with model: @user, local: true do |f| %>
+    <%= f.label :username %>   
+    <%= f.text_field :username %> <br>    
+
+    <%= f.label :password %>  
+    <%= f.text_field :password %><br>   
+
+    <%= f.submit "Sign in existing user" %>
+    <% end %>
+
+
+<%= button_to "Create an account", new_user_path, method: :get%>

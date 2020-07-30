@@ -5,11 +5,9 @@ class RestaurantReservationsController < ApplicationController
 
     def new
         @restaurantreservation = RestaurantReservation.new
-        #render :show
     end
 
     def create
-        #byebug
         @restaurantreservation = RestaurantReservation.create(restaurantreservation_params)
         redirect_to showreservations_path(params[:restaurant_reservation][:user_id])
     end
