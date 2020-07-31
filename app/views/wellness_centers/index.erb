@@ -1,3 +1,5 @@
+<%= image_tag("/assets/AdobeStock_163003185.jpeg", width: '1500px')%>
+
 <% @wellnesscenters.each do |wellness_center|%>
 <%= link_to wellness_center.name, wellness_center_path(wellness_center.id) %>
 <%end%>
