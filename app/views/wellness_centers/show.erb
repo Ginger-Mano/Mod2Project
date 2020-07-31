@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<%= image_tag("/assets/Screen Shot 2020-07-31 at 1.41.40 AM.png", width: '2000px')%>
+<%= image_tag("/assets/Screen Shot 2020-07-31 at 1.41.40 AM.png", width: '1500px')%>
 <style>
 .container {
   position: sticky;
@@ -30,7 +30,7 @@
             <b><h1><%= @wellnesscenter.name %></h1></b>
             <%= @wellnesscenter.address %><br>
             <%= @wellnesscenter.bio %><br>
-            <%= link_to @wellnesscenter.url %><br>
+            <%= @wellnesscenter.url %><br>
             Most Recent Review:<br><%= @wellnesscenter.review %><br>
             Rating:<%= @wellnesscenter.avg_rating %> <br><br>
 
