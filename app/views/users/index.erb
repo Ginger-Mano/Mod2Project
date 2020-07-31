@@ -1,5 +1,5 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FgMFCkr7kYU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<h1>Welcome</h1>
+<center><h1>Log in</h1>
 <%= form_with model: @user, local: true do |f| %>
     <%= f.label :username %>   
     <%= f.text_field :username %> <br>    
@@ -7,8 +7,8 @@
     <%= f.label :password %>  
     <%= f.text_field :password %><br>   
 
-    <%= f.submit "Sign in existing user" %>
+    <%= f.submit "Sign in" %>
     <% end %>
 
 
-<%= button_to "Create an account", new_user_path, method: :get%>
+<%= button_to "Sign up", new_user_path, method: :get%> </center>

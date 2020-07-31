@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:#D5E4CE;">
+
 <%= form_with model: @restaurantreservation, local: true do |f| %>
     <%= f.label :party_size %>   
     <%= f.number_field :party_size %> <br>    
@@ -16,3 +20,7 @@
 
     <%= f.submit "Submit" %>
     <% end %>
+
+
+</body>
+</html>

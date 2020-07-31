@@ -1,22 +1,53 @@
-<<<<<<< HEAD
-=======
-<h1>Create an account </h1>
->>>>>>> s
-<% if @errors %>
-    <% @errors.each do |error| %>
-        <p style="color:red"><%= error %></p>
-    <% end %>
-<% end %>
-<%= form_with model: @user do |f| %>
-    <%= f.label :username %>
-    <%= f.text_field :username %>
-    <br>
-    <%= f.label :password %>
-    <%= f.text_field :password %>
-    <br>
-    <%= f.label :location %>
-    <%= f.text_field :location %>
-    <br>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<%= image_tag("/assets/AdobeStock_285081303.jpeg", width: '1900px')%>
+<style>
+.container {
+  position: absolute;
+  font-family: "Courier New";
+  font-size: 130%
+}
 
-    <%= f.submit "Create Account" %>
-<% end %>
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0,0,0,0.4);
+  color: White;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+</style>
+</head>
+
+<body>
+    <% if @errors %>
+        <% @errors.each do |error| %>
+            <p style="color:red"><%= error %></p>
+         <% end %>
+    <% end %>
+
+
+<div class="container"> 
+    <center>
+    <div class="text-block">
+        <%= form_with model: @user do |f| %>
+        Sign up <br>
+        <%= f.label :username %>
+        <%= f.text_field :username %>
+        <br>
+        <%= f.label :password %>
+        <%= f.text_field :password %>
+        <br>
+        <%= f.label :location %>
+        <%= f.text_field :location %>
+        <br>
+
+        <%= f.submit "Sign Up" %>
+        <% end %>
+
+    </div>
+</div>
+</body>
