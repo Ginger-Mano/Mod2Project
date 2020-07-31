@@ -14,7 +14,7 @@ Rails.application.routes.draw do
    get '/about', to: 'static#about'
    get '/assets/AdobeStock_260128861.jpeg', to: 'restaurants#index'
    get '/assets/AdobeStock_163003185.jpeg', to: 'wellnesscenter#index'
-   get '/assets/Roast11620.mp4', to: 'users#index'
+   get '/assets/Restaurant1192.mp4', to: 'users#index'
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

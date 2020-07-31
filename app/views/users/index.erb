@@ -1,4 +1,5 @@
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FgMFCkr7kYU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<%= video_tag "Restaurant1192.mp4", id: 'background', autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_video" %>
+
 <h1>Welcome</h1>
 <%= form_with model: @user, local: true do |f| %>
     <%= f.label :username %>   
