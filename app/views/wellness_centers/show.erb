@@ -1,8 +1,37 @@
-<%= @wellnesscenter.name %>
-<%= @wellnesscenter.address %>
-<%= @wellnesscenter.bio %>
-<%= @wellnesscenter.url %>
-<%= @wellnesscenter.review %>
-<%= @wellnesscenter.avg_rating %> <br>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<%= image_tag("/assets/Screen Shot 2020-07-31 at 1.41.40 AM.png", width: '2000px')%>
+<style>
+.container {
+  position: sticky;
+  font-family: "Courier New";
+  font-size: 150%
+}
 
-<%= link_to "Create a Reservation", new_wellness_reservation_path(@wellnesscenter) %>
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0,0,0,0.4);
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+</style>
+</head>
+<body>
+
+<div class="container"> 
+    <center>
+        <div class="text-block">
+
+            <b><h1><%= @wellnesscenter.name %></h1></b>
+            <%= @wellnesscenter.address %><br>
+            <%= @wellnesscenter.bio %><br>
+            <%= link_to @wellnesscenter.url %><br>
+            Most Recent Review:<br><%= @wellnesscenter.review %><br>
+            Rating:<%= @wellnesscenter.avg_rating %> <br><br>
+
+<%= button_to "Create a Reservation", new_wellness_reservation_path(@wellnesscenter), method: :get %><br>

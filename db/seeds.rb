@@ -15,17 +15,15 @@ WellnessCenter.destroy_all
 
 
 
-# 5.times do 
-5.times do 
     User.create([
-        { username: "NYCred",
+        { username: "Select",
           password: "NYClol",
           location: "brooklyn"
         }
     ])
-end
 
-50.times do
+
+10.times do
     Restaurant.create([
         { name: Faker::Restaurant.name,
         bio: Faker::Restaurant.type,
@@ -36,10 +34,10 @@ end
     }])
     end
 
-    50.times do
+10.times do
         WellnessCenter.create([
-            { name: "Sun Studio" ,
-            bio: "Namaste",
+            { name: Faker::Company.name ,
+            bio: "Yoga",
             address: Faker::Address.street_address ,
             url: Faker::Internet.url,
             review: "Amazing studio!",

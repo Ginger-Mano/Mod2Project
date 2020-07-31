@@ -1,7 +1,26 @@
-<h1> Welcome<%= + "  " +@user.username.capitalize %></h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        body  {
+            background-image: url('/assets/AdobeStock_285081303.jpeg');
+            background-attachment: fixed;
+             background-position: 50% 50%; 
+            }
+        </style>
+        </head>
 
-<%= button_to "Reservations", showreservations_path(@user) , method: :get%>
-<%= button_to "View Black Owned Restaurants", "/restaurants", method: :get %>
-<%= button_to "View Black Owned Wellness Centers", "/wellness_centers", method: :get%><br>
+<body>
+    <div style="text-align:center">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <center><h1> Welcome<%= + "  " +@user.username.capitalize %></h1>
 
-<%= button_to "Back", users_path, method: :get%>
+            <%= button_to "Reservations", showreservations_path(@user) , method: :get%>
+            <%= button_to "View Black Owned Restaurants", "/restaurants", method: :get %>
+            <%= button_to "View Black Owned Wellness Centers", "/wellness_centers", method: :get%><br>
+
+            <%= button_to "Back", users_path, method: :get%>
+        </center>
+
+    </div>
+</body>

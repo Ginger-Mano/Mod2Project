@@ -1,8 +1,19 @@
-<%= image_tag("/assets/AdobeStock_260128861.jpeg", width: '1500px')%>
 
+<%= image_tag("/assets/AdobeStock_260128861.jpeg", width: '2000px')%>
+
+<center><br><h1>Restaurants</h1></center>
 <% @restaurants.each do |restaurant|%>
-    <br><%= link_to restaurant.name, restaurant_path(restaurant.id) %><br>
-    <%= restaurant.bio %><br>
-    <%end%>
+<div class="container">
+  <h1> </h1>
+  <br>
+  <div class="row">
+        <div class="col-md-12" style="background-color:rgb(240, 240, 240);">
+            <center><br><%= link_to restaurant.name, restaurant_path(restaurant.id) %><br></center>
+            <center><%= restaurant.bio %><br><br></center>
+        </div>
+        
+    </div>
+</div>
+<%end%>
 
     

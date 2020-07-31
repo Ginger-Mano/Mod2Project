@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:#D5E4CE;">
+
 <%= form_with model: @wellnessreservation, local: true do |f| %>
     <%= f.label :group_size %>   
     <%= f.number_field :group_size %> <br>    
@@ -17,3 +21,6 @@
 
     <%= f.submit "Submit" %>
     <% end %>
+
+</body>
+</html>
