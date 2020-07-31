@@ -1,4 +1,8 @@
+<%= image_tag("/assets/AdobeStock_260128861.jpeg", width: '1500px')%>
+
 <% @restaurants.each do |restaurant|%>
-    <%= link_to restaurant.name, restaurant_path(restaurant.id) %>
-    <%= restaurant.bio %>
+    <br><%= link_to restaurant.name, restaurant_path(restaurant.id) %><br>
+    <%= restaurant.bio %><br>
     <%end%>
+
+    
